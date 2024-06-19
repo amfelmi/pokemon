@@ -11,13 +11,26 @@ public class main {
         while (true) {
             System.out.println("\nPikachu's HP: " + p.hp);
             System.out.println("Gengar's HP: " + g.hp);
+            Scanner entry = new Scanner(System.in);
 
             if (p != null && p.isDefeated()) {
                 System.out.println("Pikachu has fainted! Gengar wins!");
+                System.out.println("Pikachu got 14252 EXP.");
+                System.out.println("Pikachu Leveled up");
+                System.out.println("Pikachu Leveled up");
+                System.out.println("Pikachu Leveled up");
+                System.out.println("Pikachu Leveled up");
+                System.out.println("Pikachu Leveled up");
                 break;
             }
             if (g != null && g.isDefeated()) {
                 System.out.println("Gengar has fainted! Pikachu wins!");
+                System.out.println("Gengar got 14252 EXP.");
+                System.out.println("Gengar Leveled up");
+                System.out.println("Gengar Leveled up");
+                System.out.println("Gengar Leveled up");
+                System.out.println("Gengar Leveled up");
+                System.out.println("Gengar Leveled up");
                 break;
             }
 
@@ -30,6 +43,7 @@ public class main {
                 System.out.println("4: Quick Attack");
 
                 int input = scanner.nextInt();
+                scanner.nextLine();
 
                 switch (input) {
                     case 1 -> p.voltTackle(g);
@@ -40,6 +54,10 @@ public class main {
                 }
                 // CPU
                 System.out.println("\n Champion Cynthia's Turn");
+                // Pause
+                System.out.println("Press Enter to Continue");
+                scanner.nextLine();
+
                 Random random = new Random();
                 int cpuInput = random.nextInt(4) + 1;
 
@@ -50,6 +68,9 @@ public class main {
                     case 4 -> g.dreamEater(p);
                     default -> System.out.println("Invalid move. Gengar skips its turn.");
                 }
+                // Pause
+                System.out.println("Press Enter to Continue");
+                entry.nextLine();
 
             } else {
                 System.out.println("\nGengar's turn! Choose a move:");
@@ -59,6 +80,7 @@ public class main {
                 System.out.println("4. Dream Eater");
 
                 int input = scanner.nextInt();
+                scanner.nextLine();
 
                 switch (input) {
                     case 1 -> g.shadowBall(p);
@@ -70,6 +92,10 @@ public class main {
 
                 // CPU
                 System.out.println("\n Ash's Turn");
+                // Puase
+                System.out.println("Press Enter to Continue");
+                entry.nextLine();
+
                 Random random = new Random();
                 int cpuInput = random.nextInt(4) + 1;
 
@@ -80,6 +106,9 @@ public class main {
                     case 4 -> p.quickAttack(g);
                     default -> System.out.println("Invalid move. Pikachu skips its turn.");
                 }
+                // Pause
+                System.out.println("Press Enter to Continue");
+                entry.nextLine();
             }
         }
 
@@ -94,16 +123,16 @@ public class main {
         if(inputValue.equals("1")){
             System.out.println("Pikachu! I choose you!");
             System.out.println("Champion Cynthia takes out her final pokemon. It's Gengar!");
-            p = new Pikachu("Pikachu", "Electric", 10, 600, 90, 90, 55, 80);
-            g = new Gengar("Gengar", "Ghost", 10, 600, 65, 130, 60, 75);
+            p = new Pikachu("Pikachu", "Electric", 10, 150, 90, 90, 55, 80);
+            g = new Gengar("Gengar", "Ghost", 10, 150, 65, 130, 60, 75);
             player = 10;
             break;
         }
         else if (inputValue.equals("2")){
             System.out.println("Gengar! I choose you!");
             System.out.println("Ash takes out his final pokemon. It's Pikachu!");
-            g = new Gengar("Gengar", "Ghost", 10, 600, 65, 130, 60, 75);
-            p = new Pikachu("Pikachu", "Electric", 10, 600, 90, 90, 55, 80);
+            g = new Gengar("Gengar", "Ghost", 10, 150, 65, 130, 60, 75);
+            p = new Pikachu("Pikachu", "Electric", 10, 150, 90, 90, 55, 80);
             player = 20;
             break;
         }

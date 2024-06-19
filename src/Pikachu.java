@@ -11,7 +11,7 @@ public class Pikachu extends Pokemon{
 
     public void voltTackle(Pokemon enemy){
         int power = 120;
-        int damage = (((2*level)/5 + 2) * power * spAttack/enemy.getSpDefence()) / 50 + 2;
+        int damage = ((((2*level)/5 + 2) * power * spAttack/enemy.getSpDefence()) / 50 + 2) * 2;
         enemy.setHp(enemy.getHp() - damage);
         System.out.println("Pikachu uses Volt Tackle!");
         System.out.println("Electricity Sparks as Pikachu speeds up to slam his target!");
@@ -29,7 +29,7 @@ public class Pikachu extends Pokemon{
 
     public void thunder(Pokemon enemy){
         int power = 110;
-        int damage = (((2*level)/5 + 2) * power * spAttack/enemy.getSpDefence()) / 50 + 2;
+        int damage = ((((2*level)/5 + 2) * power * spAttack/enemy.getSpDefence()) / 50 + 2) * 2;
         enemy.setHp(enemy.getHp() - damage);
         System.out.println("Pikachu uses Thunder!");
         System.out.println("Pikachu Charges a large amount to strike his target!");
