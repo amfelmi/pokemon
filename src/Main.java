@@ -1,10 +1,11 @@
 import java.util.Scanner;
 import java.util.Random;
-public class main {
+public class Main {
     static Pikachu p;
     static Gengar g;
     static int player; // Use in game if statement so player can select ability.
     public static void main(String[] args) {
+        Title.getTitle();
         startGame();
         Scanner scanner = new Scanner(System.in);
 
